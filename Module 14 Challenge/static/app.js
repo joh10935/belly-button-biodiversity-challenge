@@ -12,11 +12,11 @@ function getPlots(id) {
             console.log (labels)
         
             // Top 10 
-            var OTU_top10 = ( sampledata.samples[0].otu_ids.slice(0, 10)).reverse();
+            var OTU_top10 = (sampledata.samples[0].otu_ids.slice(0, 10)).reverse();
         
             // Get the top 10 IDs
             var OTU_id = OTU_top10.map(x => "OTU " + x);
-            console.log(`OTU IDS: ${OTU_id}`)
+            console.log(`OTU IDs: ${OTU_id}`)
             // Get top 10 labels
             var labels =  sampledata.samples[0].otu_labels.slice(0,10);
             console.log(`OTU_labels: ${labels}`)
@@ -25,7 +25,7 @@ function getPlots(id) {
                 y: OTU_id,
                 text: labels,
                 marker: {
-                color: 'blue'},
+                color: 'red'},
                 type:"bar",
                 orientation: "h",
             };
@@ -40,9 +40,9 @@ function getPlots(id) {
                 },
                 margin: {
                     l: 100,
-                    r: 100,
-                    t: 100,
-                    b: 30
+                    r: 50,
+                    t: 50,
+                    b: 15
                 }
             };
     
